@@ -36,8 +36,9 @@ function draw() {
     background(0);
     for (var i = hits.length - 1; i >= 0; i--) {
         var hit = hits[i];
-        var r = map(hit.total, 0, 2000, 10, height / 2);
-        fill(255, 255, 255, 100);
+        var ran = random(255); 
+        var r = map(hit.total, 0, 2000, 10, height/2);
+        fill(76, 76, ran, 100);
         noStroke();
         ellipse(map(hit.year, firstYear, lastYear, 0, width), height / 2, r, r)
     };
